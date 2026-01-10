@@ -17,11 +17,10 @@ fun areTilesIdentical(tiles: List<Tile>): Boolean {
     return tiles.all { it == firstTile }
 }
 
-fun isGroupValid(grouping: Grouping): Boolean {
-    return when (grouping) {
-        is Grouping.Chow -> isValidChow(grouping.tiles)
-        is Grouping.Pung -> areTilesIdentical(grouping.tiles) && grouping.tiles.size == 3
-        is Grouping.Kong -> areTilesIdentical(grouping.tiles) && grouping.tiles.size == 4
-        is Grouping.Pair -> areTilesIdentical(grouping.tiles) && grouping.tiles.size == 2
+fun Tile.isTerminalOrHonor(): Boolean {
+    return when (this) {
+        is Tile.Numbered -> this.value == 1 || this.value == 9
+        is Tile.Honor -> true
+        else -> false
     }
 }
