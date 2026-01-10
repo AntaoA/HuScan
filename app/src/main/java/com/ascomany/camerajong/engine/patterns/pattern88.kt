@@ -3,7 +3,6 @@ package com.ascomany.camerajong.engine.patterns
 import com.ascomany.camerajong.engine.Grouping
 import com.ascomany.camerajong.engine.Tile
 import com.ascomany.camerajong.engine.NumberedType
-import com.ascomany.camerajong.engine.Wind
 import com.ascomany.camerajong.engine.Dragon
 
 val pattern88 = listOf(
