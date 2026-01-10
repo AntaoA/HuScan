@@ -203,11 +203,9 @@ fun GroupCreationDialog(type: String, onDismiss: () -> Unit, onConfirm: (Tile, B
         title = { Text("Ajouter $type") },
         text = {
             Column {
-                if (type != "Pair") {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Checkbox(checked = isExposed, onCheckedChange = { isExposed = it })
-                        Text("Groupe exposé (Mélange)")
-                    }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Checkbox(checked = isExposed, onCheckedChange = { isExposed = it })
+                    Text("Groupe exposé (Mélange)")
                 }
                 TilePicker { selectedTile -> onConfirm(selectedTile, isExposed) }
             }
