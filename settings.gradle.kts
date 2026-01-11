@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CameraJong"
+rootProject.name = "HuScan"
 include(":app")

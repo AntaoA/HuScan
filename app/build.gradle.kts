@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.ascomany.camerajong"
+    namespace = "com.ascomany.huscan"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.ascomany.camerajong"
+        applicationId = "com.ascomany.huscan"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
