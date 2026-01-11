@@ -92,6 +92,10 @@ class ManualScorerViewModel(private val engine: ScoringEngine) : ViewModel() {
      * Lance le moteur de calcul MCR.
      */
     fun calculate() {
+        if (isHandSizeInvalid() || getOverLimitTiles().isNotEmpty()) {
+            _scoreResult.value = null
+            return
+        }
         val currentWinningTile = _winningTile.value ?: _groupings.value.lastOrNull()?.tiles?.last()
 
         if (currentWinningTile != null) {

@@ -90,9 +90,11 @@ fun ManualScorerScreen(viewModel: ManualScorerViewModel) {
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
                     onClick = { viewModel.calculate() },
-                    enabled = isValidHandSize,
+                    enabled = isValidHandSize && overLimitTiles.isEmpty(),
                     modifier = Modifier.fillMaxWidth()
-                ) { Text("CALCULER LE SCORE") }
+                ) {
+                    Text("CALCULER LE SCORE")
+                }
             }
 
             item {
